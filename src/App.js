@@ -4,10 +4,18 @@ import { NavBar } from './ui-components';
 import { Footer } from './ui-components';
  
  function App() {
-
+  const navbarOverrides = { 
+    image: { src: "https://img.icons8.com/color/50/000000/cat" },
+    "Add Pet": {
+      style: {
+        cursor: "pointer",
+      },
+      onClick: () => alert("Add Pet"),
+    }
+  };
    return (
      <div className="App">
-        <NavBar width={"100%"}/>
+        <NavBar width={"100%"} overrides={navbarOverrides} />
           <header className="App-header">
             <Pets 
             overrideItems={({ item, index }) => ({

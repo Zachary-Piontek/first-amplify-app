@@ -120,7 +120,6 @@ export default function NavBar(props) {
           borderRadius="160px"
           padding="0px 0px 0px 0px"
           objectFit="cover"
-          src="https://img.icons8.com/color/50/000000/dog"
           {...getOverrideProps(overrides, "image")}
         ></Image>
       </Flex>
