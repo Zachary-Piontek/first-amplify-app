@@ -2,7 +2,9 @@ import './App.css';
 import { Pets } from './ui-components';
 import { NavBar } from './ui-components';
 import { Footer } from './ui-components';
+import { AddPet } from './ui-components';
  
+
  function App() {
   const navbarOverrides = { 
     image: { src: "https://img.icons8.com/color/50/000000/cat" },
@@ -17,6 +19,7 @@ import { Footer } from './ui-components';
      <div className="App">
         <NavBar width={"100%"} overrides={navbarOverrides} />
           <header className="App-header">
+          <AddPet />
             <Pets 
             overrideItems={({ item, index }) => ({
               overrides: {

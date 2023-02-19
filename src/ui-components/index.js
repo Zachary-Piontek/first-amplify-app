@@ -7,7 +7,7 @@
 export { default as Features2x2 } from "./Features2x2";
 export { default as MarketingPricing } from "./MarketingPricing";
 export { default as Ampligram } from "./Ampligram";
-export { default as EditProfile } from "./EditProfile";
+export { default as AddPet } from "./AddPet";
 export { default as TallCard } from "./TallCard";
 export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as Features2x3 } from "./Features2x3";
