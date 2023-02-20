@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { PetDetails } from './ui-components';
 import { withAuthenticator } from '@aws-amplify/ui-react';
  
- function App() {
+ function App({ user, signOut }) {
   const [showForm, setShowForm] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [pet, setPet] = useState();
@@ -66,7 +66,14 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
         setShowForm(!showForm);
       },
     },
-  };
+    Button: {
+      onClick: signOut,
+      },
+      // add name of user to navbar
+      "Hello,": {
+        children: user.username,
+      },
+    };
 
    return (
      <div className="App">

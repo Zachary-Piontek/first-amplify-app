@@ -6,10 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import { getOverrideProps, useAuth } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
   const { overrides, ...rest } = props;
+  const authAttributes = useAuth().user?.attributes ?? {};
   return (
     <Flex
       gap="20px"
@@ -95,7 +96,7 @@ export default function NavBar(props) {
         ></Text>
       </Flex>
       <Flex
-        gap="32px"
+        gap="22px"
         direction="row"
         width="unset"
         height="unset"
@@ -108,6 +109,16 @@ export default function NavBar(props) {
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Frame 32129767081")}
       >
+        <Button
+          width="333px"
+          shrink="0"
+          alignSelf="stretch"
+          size="large"
+          isDisabled={false}
+          variation="primary"
+          children="Signout"
+          {...getOverrideProps(overrides, "Button")}
+        ></Button>
         <Image
           width="45px"
           height="45px"
@@ -122,16 +133,28 @@ export default function NavBar(props) {
           objectFit="cover"
           {...getOverrideProps(overrides, "image")}
         ></Image>
-        <Button
-          width="333px"
+        <Text
+          fontFamily="Inter"
+          fontSize="24px"
+          fontWeight="700"
+          color="rgba(0,0,0,1)"
+          lineHeight="24px"
+          textAlign="left"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          letterSpacing="0.09px"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           shrink="0"
-          alignSelf="stretch"
-          size="large"
-          isDisabled={false}
-          variation="primary"
-          children="Signout"
-          {...getOverrideProps(overrides, "Button")}
-        ></Button>
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={authAttributes["name"]}
+          {...getOverrideProps(overrides, "User")}
+        ></Text>
       </Flex>
     </Flex>
   );

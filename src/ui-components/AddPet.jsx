@@ -218,7 +218,6 @@ export default function AddPet(props) {
             borderRadius="160px"
             padding="0px 0px 0px 0px"
             objectFit="cover"
-            src={pet?.image}
             {...getOverrideProps(overrides, "image")}
           ></Image>
         </Flex>

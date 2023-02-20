@@ -15,8 +15,9 @@ export declare type NavBarOverridesProps = {
     "Frame 32129767076"?: PrimitiveOverrideProps<FlexProps>;
     "Add Pet"?: PrimitiveOverrideProps<TextProps>;
     "Frame 32129767081"?: PrimitiveOverrideProps<FlexProps>;
-    image?: PrimitiveOverrideProps<ImageProps>;
     Button?: PrimitiveOverrideProps<ButtonProps>;
+    image?: PrimitiveOverrideProps<ImageProps>;
+    User?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type NavBarProps = React.PropsWithChildren<Partial<FlexProps> & {
     overrides?: NavBarOverridesProps | undefined | null;
