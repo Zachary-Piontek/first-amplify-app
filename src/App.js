@@ -6,7 +6,6 @@ import { AddPet } from './ui-components';
 import { useState } from 'react';
 import { PetDetails } from './ui-components';
  
-
  function App() {
   const [showForm, setShowForm] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -65,8 +64,9 @@ import { PetDetails } from './ui-components';
       onClick: () => {
         setShowForm(!showForm);
       },
-    }
+    },
   };
+
    return (
      <div className="App">
         <NavBar width={"100%"} overrides={navbarOverrides} />

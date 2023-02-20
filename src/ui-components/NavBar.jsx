@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
+import { Button, Flex, Icon, Image, Text } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
   const { overrides, ...rest } = props;
   return (
@@ -122,6 +122,16 @@ export default function NavBar(props) {
           objectFit="cover"
           {...getOverrideProps(overrides, "image")}
         ></Image>
+        <Button
+          width="333px"
+          shrink="0"
+          alignSelf="stretch"
+          size="large"
+          isDisabled={false}
+          variation="primary"
+          children="Signout"
+          {...getOverrideProps(overrides, "Button")}
+        ></Button>
       </Flex>
     </Flex>
   );
