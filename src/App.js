@@ -5,6 +5,7 @@ import { Footer } from './ui-components';
 import { AddPet } from './ui-components';
 import { useState } from 'react';
 import { PetDetails } from './ui-components';
+import { withAuthenticator } from '@aws-amplify/ui-react';
  
  function App() {
   const [showForm, setShowForm] = useState(false);
@@ -12,12 +13,12 @@ import { PetDetails } from './ui-components';
   const [pet, setPet] = useState();
   const [updatePet, setUpdatePet] = useState();
 
-  const [name, setName] = useState('');
-  const [breed, setBreed] = useState('');
-  const [age, setAge] = useState('');
-  const [image, setImage] = useState('');
-  const [about, setAbout] = useState('');
-  const [color, setColor] = useState('');
+  const [name, setName] = useState("");
+  const [breed, setBreed] = useState("");
+  const [age, setAge] = useState("");
+  const [image, setImage] = useState("");
+  const [about, setAbout] = useState("");
+  const [color, setColor] = useState("");
 
   const formOverride = {
     TextField29766922: {
@@ -119,4 +120,4 @@ import { PetDetails } from './ui-components';
   );
 }
 
-export default App;
+export default withAuthenticator(App);
