@@ -24,7 +24,7 @@ export { default as ProductDetail } from "./ProductDetail";
 export { default as PetProfile } from "./PetProfile";
 export { default as CommentCard } from "./CommentCard";
 export { default as ActionCard } from "./ActionCard";
-export { default as ReviewCard } from "./ReviewCard";
+export { default as PetDetails } from "./PetDetails";
 export { default as StandardCard } from "./StandardCard";
 export { default as Pets } from "./Pets";
 export { default as Features4x1 } from "./Features4x1";

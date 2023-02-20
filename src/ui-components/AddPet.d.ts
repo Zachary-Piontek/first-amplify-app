@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Pet } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ButtonProps, DividerProps, FlexProps, IconProps, ImageProps, TextFieldProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -32,6 +33,8 @@ export declare type AddPetOverridesProps = {
     Button29766926?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type AddPetProps = React.PropsWithChildren<Partial<FlexProps> & {
+    pet?: Pet;
+} & {
     overrides?: AddPetOverridesProps | undefined | null;
 }>;
 export default function AddPet(props: AddPetProps): React.ReactElement;
