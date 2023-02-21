@@ -38,13 +38,15 @@ export default function PetProfile(props) {
       <Flex
         gap="10px"
         direction="column"
-        width="unset"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
+        width="105px"
+        height="48px"
+        justifyContent="center"
+        alignItems="center"
         shrink="0"
         position="relative"
+        borderRadius="25px"
         padding="10px 10px 10px 10px"
+        backgroundColor="rgba(255,124,124,1)"
         {...getOverrideProps(overrides, "Frame 420")}
       >
         <Button

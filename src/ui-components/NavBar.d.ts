@@ -10,13 +10,13 @@ import { ButtonProps, FlexProps, IconProps, ImageProps, TextProps } from "@aws-a
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type NavBarOverridesProps = {
     NavBar?: PrimitiveOverrideProps<FlexProps>;
-    Logo?: PrimitiveOverrideProps<FlexProps>;
+    "Frame 321"?: PrimitiveOverrideProps<FlexProps>;
     "Star 1"?: PrimitiveOverrideProps<IconProps>;
-    "Frame 32129767076"?: PrimitiveOverrideProps<FlexProps>;
     "Add Pet"?: PrimitiveOverrideProps<TextProps>;
-    "Frame 32129767081"?: PrimitiveOverrideProps<FlexProps>;
-    Button?: PrimitiveOverrideProps<ButtonProps>;
+    Logo?: PrimitiveOverrideProps<FlexProps>;
+    "Frame 423"?: PrimitiveOverrideProps<FlexProps>;
     image?: PrimitiveOverrideProps<ImageProps>;
+    Button?: PrimitiveOverrideProps<ButtonProps>;
     User?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type NavBarProps = React.PropsWithChildren<Partial<FlexProps> & {
